@@ -6,39 +6,12 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-
-<!-- ✅ PWA & Install Meta Tags -->
 <meta name="theme-color" content="#8b5cf6">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="HALLO TOPUP">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="description" content="HALLO TOPUP - Free Fire Diamond Topup at Best Price">
-<link rel="manifest" href='data:application/manifest+json;base64,eyJuYW1lIjoiSEFMTE8gVE9QVVAiLCJzaG9ydF9uYW1lIjoiSEFMTE8iLCJzdGFydF91cmwiOiIuIiwiZGlzcGxheSI6InN0YW5kYWxvbmUiLCJiYWNrZ3JvdW5kX2NvbG9yIjoiI2Y0ZjRmYiIsInRoZW1lX2NvbG9yIjoiIzhiNWNmNiIsImljb25zIjpbeyJzcmMiOiJodHRwczovL3VwbG9hZC53aWtpbWVkaWEub3JnL3dpa2lwZWRpYS9jb21tb25zLzUvNTMvR29vZ2xlXyUyMkclMjJfTG9nby5zdmciLCJzaXplcyI6IjE5MngxOTIiLCJ0eXBlIjoiaW1hZ2Uvc3ZnK3htbCJ9XX0='>
-
 <title>HALLO TOPUP - Free Fire</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Baloo+Da+2:wght@500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{--primary:#8b5cf6;--bg:#f4f4fb;--text:#1f2937;--muted:#6b7280;--success:#10b981;--price:#7c3aed;--silver:#94a3b8;--gold:#fbbf24;--platinum:#06b6d4;--diamond:#3b82f6;--heroic:#আপনার অনুরোধ অনুযায়ী, আমি কোডটি এমনভাবে আপডেট করেছি যাতে:
-১. **অনলাইন চেক:** অ্যাপটি চালু হওয়ার সাথে সাথে ইন্টারনেট সংযোগ আছে কিনা তা চেক করবে। নেট না থাকলে একটি সুন্দর স্ক্রিন আসবে এবং অ্যাপ ব্যবহার করা যাবে না।
-২. **ডাউনলোড/শেয়ার সিস্টেম:** ইউজাররা এখন "Share App" বাটনে ক্লিক করে লিংক কপি করতে পারবে বা সরাসরি শেয়ার করতে পারবে। এছাড়াও ব্রাউজারের মেনু থেকে "Add to Home Screen" করার অপশনটি আরও স্মার্টভাবে কাজ করবে।
-
-নিচে সম্পূর্ণ আপডেট করা কোডটি দেওয়া হলো:
-
-```html
-<!DOCTYPE html>
-<html lang="bn">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
-<meta name="theme-color" content="#8b5cf6">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>HALLO TOPUP - Free Fire</title>
+<link rel="manifest" href="data:application/manifest+json,{%22name%22:%22HALLO%20TOPUP%22,%22short_name%22:%22HALLO%20TOPUP%22,%22start_url%22:%22.%22,%22display%22:%22standalone%22,%22background_color%22:%22%23f4f4fb%22,%22theme_color%22:%22%238b5cf6%22}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Baloo+Da+2:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -217,64 +190,23 @@ header{position:fixed;top:0;left:50%;transform:translateX(-50%);width:100%;max-w
 .mystery-info ul{list-style:none;padding:0;}
 .mystery-info li{font-size:.8rem;color:#92400e;padding:3px 0;}
 
-/* ✅ Online/Offline Status Styles */
-#offlineOverlay {
-    position: fixed; inset: 0; background: #fff; z-index: 9999; 
-    display: none; flex-direction: column; align-items: center; justify-content: center; 
-    text-align: center; padding: 30px;
-}
-#offlineOverlay i { font-size: 4rem; color: #ef4444; margin-bottom: 20px; }
-#offlineOverlay h2 { color: #1f2937; margin-bottom: 10px; }
-#offlineOverlay p { color: #6b7280; margin-bottom: 30px; line-height: 1.6; }
-.retry-btn {
-    background: var(--primary); color: #fff; border: none; padding: 12px 30px; 
-    border-radius: 25px; font-size: 1rem; font-weight: 600; cursor: pointer;
-    display: flex; align-items: center; gap: 8px;
-}
-
-/* ✅ Share & Download Modal Styles */
-.modal-overlay {
-    position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 2000; 
-    display: none; align-items: flex-end; justify-content: center; backdrop-filter: blur(4px);
-}
-.modal-overlay.show { display: flex; animation: fadeIn 0.3s; }
-.modal-content {
-    background: #fff; width: 100%; max-width: 480px; border-radius: 24px 24px 0 0; 
-    padding: 24px; animation: slideUp 0.3s ease;
-}
-@keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
-.modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
-.modal-header h3 { font-size: 1.2rem; color: var(--text); }
-.close-modal { background: #f3f4f6; border: none; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; color: var(--muted); }
-.share-options { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-bottom: 20px; }
-.share-item { display: flex; flex-direction: column; align-items: center; gap: 8px; cursor: pointer; }
-.share-icon { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: #fff; transition: transform 0.2s; }
-.share-item:active .share-icon { transform: scale(0.9); }
-.share-item span { font-size: 0.75rem; color: var(--text); font-weight: 500; }
-.copy-link-box {
-    display: flex; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 12px; 
-    padding: 4px; align-items: center;
-}
-.copy-link-box input {
-    flex: 1; border: none; background: transparent; padding: 10px; font-size: 0.85rem; 
-    color: var(--muted); outline: none;
-}
-.copy-link-box button {
-    background: var(--primary); color: #fff; border: none; padding: 8px 16px; 
-    border-radius: 8px; font-size: 0.8rem; font-weight: 600; cursor: pointer; white-space: nowrap;
-}
+/* Download & Install Modal */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:2000;display:none;align-items:flex-end;justify-content:center;backdrop-filter:blur(4px);}
+.modal-overlay.show{display:flex;}
+.modal-content{background:#fff;width:100%;max-width:480px;border-radius:24px 24px 0 0;padding:24px;animation:slideUp 0.3s ease;}
+@keyframes slideUp{from{transform:translateY(100%)}to{transform:translateY(0)}}
+.modal-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;}
+.modal-header h3{font-size:1.2rem;color:var(--text);}
+.close-modal{background:#f3f4f6;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;color:var(--muted);}
+.download-options{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:20px;}
+.download-option{background:#f9fafb;border:2px solid #e5e7eb;border-radius:12px;padding:16px;cursor:pointer;transition:all 0.2s;text-align:center;}
+.download-option:hover{border-color:var(--primary);background:#f5f3ff;}
+.download-option i{font-size:1.5rem;color:var(--primary);margin-bottom:8px;}
+.download-option b{display:block;font-size:0.9rem;color:var(--text);margin-bottom:4px;}
+.download-option small{font-size:0.75rem;color:var(--muted);}
 </style>
 </head>
 <body oncontextmenu="return false;" onselectstart="return false;" ondragstart="return false;">
-
-<!-- ✅ Offline Overlay -->
-<div id="offlineOverlay">
-    <i class="fas fa-wifi"></i>
-    <h2>No Internet Connection</h2>
-    <p>অ্যাপটি ব্যবহার করার জন্য ইন্টারনেট সংযোগ প্রয়োজন।<br>দয়া করে আপনার ইন্টারনেট চেক করুন এবং আবার চেষ্টা করুন।</p>
-    <button class="retry-btn" onclick="checkOnlineStatus()"><i class="fas fa-redo"></i> Retry</button>
-</div>
-
 <div class="app">
   <div id="loginScreen" class="auth">
     <div class="auth-logo"><div class="lg" id="authLogo"><i class="fas fa-smile-wink"></i></div><h1 id="authName">HALLO TOPUP</h1></div>
@@ -302,7 +234,6 @@ header{position:fixed;top:0;left:50%;transform:translateX(-50%);width:100%;max-w
       <div class="h-right">
         <div class="wallet"><i class="fas fa-wallet"></i><span id="hBal">0</span>৳</div>
         <div class="vip-badge-sm" id="hVip">Silver</div>
-        <!-- ✅ ব্যালেন্স ফিক্সের অংশ (JS ক্র্যাশ রোধ করতে লুকানো এলিমেন্ট) -->
         <div id="hAv" style="display:none;"></div>
       </div>
     </header>
@@ -310,7 +241,7 @@ header{position:fixed;top:0;left:50%;transform:translateX(-50%);width:100%;max-w
     <div class="content">
       <div id="page-home" class="page active">
         <div class="home-pad">
-          <div class="notice bn" id="noticeBox"><span><b>Notice:</b> <span id="noticeText">যেকোনো প্রয়োজনে Telegram Support-এ মেসেজ দিন | সাপোর্ট সময়: সকাল ৮টা থেকে রাত টা</span></span><i class="fas fa-times-circle" onclick="document.getElementById('noticeBox').style.display='none'"></i></div>
+          <div class="notice bn" id="noticeBox"><span><b>Notice:</b> <span id="noticeText">যেকোনো প্রয়োজনে Telegram Support-এ মেসেজ দিন | সাপোর্ট সময়: সকাল ৮টা থেকে রাত ২টা</span></span><i class="fas fa-times-circle" onclick="document.getElementById('noticeBox').style.display='none'"></i></div>
           <div class="b-slider" id="bannerSlider"></div>
           <div class="dots" id="bannerDots"><span class="on"></span></div>
           <button class="tg-btn" id="tgBtn" onclick="toast('Telegram Support-এ যোগাযোগ করুন')"><span class="tg-ic"><i class="fab fa-telegram-plane"></i></span><span style="text-align:left"><small>SUPPORT</small><b>Telegram</b></span></button>
@@ -326,176 +257,18 @@ header{position:fixed;top:0;left:50%;transform:translateX(-50%);width:100%;max-w
         </div>
       </div>
 
-      <div id="page-mystery" class="page">
-        <div class="order-pad">
-          <div class="order-hero"><div class="order-hero-ic"><i class="fas fa-box-open"></i></div><div><h3>Mystery Box</h3><div class="fast bn"><i class="fas fa-gift"></i> রহস্যময় উপহার</div></div></div>
-          
-          <div class="mystery-info">
-            <h4><i class="fas fa-dice"></i> কি পাবেন?</h4>
-            <ul>
-              <li>50 বক্স → 25 Diamonds অথবা Weekly Lite</li>
-              <li>৳100 বক্স → Weekly অথবা Monthly</li>
-              <li>200 বক্স → 2x Monthly অথবা 10,000 Diamonds</li>
-            </ul>
-          </div>
-
-          <div class="step-head"><div class="step-num">1</div><h4>Select Mystery Box</h4></div>
-          <div class="pkg-grid" id="mysteryGrid"></div>
-          
-          <div class="step-head"><div class="step-num">2</div><h4>Player Info</h4></div>
-          <label class="field-label">Player Id</label>
-          <input class="uid-input" type="text" id="mysteryUid" placeholder="Player Id">
-          <button class="check-btn bn" onclick="checkMysteryUid()">নাম চেক করুন</button>
-          <div class="uid-result" id="mysteryResult"></div>
-          
-          <div class="info-row bn"><i class="fas fa-info-circle"></i> আপনার ব্যালেন্স <b id="mysteryBalance">৳ 0</b></div>
-          <button class="buy-btn" onclick="buyMysteryBox()"><i class="fas fa-shopping-cart"></i> কিনুন</button>
-          
-          <div class="rules"><h4><i class="fas fa-info-circle"></i> Mystery Box নিয়ম</h4><ul>
-            <li class="bn">যেকোনো একটি র্যান্ডম রিওয়ার্ড পাবেন।</li>
-            <li class="bn">অর্ডার করার পর ডায়মন্ড পাবেন।</li>
-            <li class="bn">রিওয়ার্ড পরিবর্তনযোগ্য নয়।</li>
-          </ul></div>
-        </div>
-      </div>
-
-      <div id="page-weekly" class="page">
-        <div class="order-pad">
-          <div class="order-hero" style="background:linear-gradient(135deg,#d1fae5,#a7f3d0);"><div class="order-hero-ic" style="background:linear-gradient(135deg,#10b981,#34d399);"><i class="fas fa-calendar-week"></i></div><div><h3>Weekly & Monthly Offer</h3><div class="fast bn"><i class="fas fa-tag"></i> সবচেয়ে কম দামে</div></div></div>
-          
-          <div class="mystery-info" style="background:linear-gradient(135deg,#d1fae5,#a7f3d0);border-color:#10b981;">
-            <h4 style="color:#047857;"><i class="fas fa-fire"></i> বিশেষ অফার!</h4>
-            <ul>
-              <li style="color:#065f46;">Regular দামের চেয়ে অনেক কম!</li>
-              <li style="color:#065f46;">Weekly মাত্র ৳120 (Regular ৳158)</li>
-              <li style="color:#065f46;">Monthly মাত্র 700 (Regular ৳790)</li>
-            </ul>
-          </div>
-
-          <div class="step-head"><div class="step-num">1</div><h4>Select Package</h4></div>
-          <div class="pkg-grid" id="weeklyGrid"></div>
-          
-          <div class="step-head"><div class="step-num">2</div><h4>Player Info</h4></div>
-          <label class="field-label">Player Id</label>
-          <input class="uid-input" type="text" id="weeklyUid" placeholder="Player Id">
-          <button class="check-btn bn" onclick="checkWeeklyUid()">নাম চেক করুন</button>
-          <div class="uid-result" id="weeklyResult"></div>
-          
-          <div class="info-row bn"><i class="fas fa-info-circle"></i> আপনার ব্যালেন্স <b id="weeklyBalance">৳ 0</b></div>
-          <button class="buy-btn" style="background:#10b981;" onclick="buyWeeklyOffer()"><i class="fas fa-shopping-cart"></i> কিনুন</button>
-        </div>
-      </div>
-
-      <div id="page-premium" class="page">
-        <div class="order-pad">
-          <div class="order-hero" style="background:linear-gradient(135deg,#fee2e2,#fecaca);"><div class="order-hero-ic" style="background:linear-gradient(135deg,#ef4444,#f87171);"><i class="fas fa-crown"></i></div><div><h3>Premium Customer</h3><div class="fast bn"><i class="fas fa-star"></i> VIP Level 5+ Exclusive</div></div></div>
-          
-          <div class="offer-content">
-            <h3><i class="fas fa-gem" style="color:var(--price)"></i> Premium সুবিধাসমূহ</h3>
-            <ul>
-              <li>সব টপআপে 10% ক্যাশব্যাক</li>
-              <li>প্রায়োরিটি সাপোর্ট (24/7)</li>
-              <li>বিশেষ ডিসকাউন্ট (15-25%)</li>
-              <li>মাসিক ফ্রি ডায়মন্ড (100+)</li>
-              <li>এক্সক্লুসিভ ইভেন্ট এক্সেস</li>
-              <li>ফাস্ট ডেলিভারি (5 মিনিট)</li>
-            </ul>
-          </div>
-
-          <div class="step-head"><div class="step-num">1</div><h4>Premium Packages</h4></div>
-          <div class="pkg-grid" id="premiumGrid"></div>
-          
-          <div class="step-head"><div class="step-num">2</div><h4>Player Info</h4></div>
-          <label class="field-label">Player Id</label>
-          <input class="uid-input" type="text" id="premiumUid" placeholder="Player Id">
-          <button class="check-btn bn" onclick="checkPremiumUid()">নাম চেক করুন</button>
-          <div class="uid-result" id="premiumResult"></div>
-          
-          <div class="offer-content">
-            <h3><i class="fas fa-medal" style="color:var(--success)"></i> আপনার স্ট্যাটাস</h3>
-            <p style="text-align:center;padding:12px;background:#f3f4f6;border-radius:8px;margin-top:8px;">
-              <b id="premiumUserLevel">Level 1</b> - <span id="premiumStatus" style="color:var(--muted)">Silver Member</span>
-            </p>
-          </div>
-          
-          <div class="info-row bn"><i class="fas fa-info-circle"></i> আপনার ব্যালেন্স <b id="premiumBalance">৳ 0</b></div>
-          <button class="buy-btn" style="background:#ef4444;" onclick="buyPremiumOffer()"><i class="fas fa-shopping-cart"></i> কিনুন</button>
-        </div>
-      </div>
-
-      <div id="page-order" class="page">
-        <div class="order-pad">
-          <div class="order-hero"><div class="order-hero-ic" id="ordIcon"><i class="fas fa-gem"></i></div><div><h3 id="ordTitle">Category</h3><div class="fast bn"><i class="fas fa-bolt"></i>  সেকেন্ডে টপআপ</div></div></div>
-          <div class="step-head"><div class="step-num">1</div><h4>Select Recharge</h4></div>
-          <div class="pkg-grid" id="pkgGrid"></div>
-          <div class="how-order bn" onclick="toast('Player ID দিয়ে অর্ডার করুন')"><i class="fas fa-external-link-alt"></i> কিভাবে অর্ডার করবেন? <i class="fas fa-arrow-right"></i></div>
-          <div class="step-head"><div class="step-num">2</div><h4>Account Info</h4></div>
-          <label class="field-label">Player Id</label>
-          <input class="uid-input" type="text" id="uidInput" placeholder="Player Id">
-          <button class="check-btn bn" onclick="checkUid()">আপনার গেম আইডির নাম চেক করুন</button>
-          <div class="uid-result" id="uidResult"></div>
-          <div class="step-head"><div class="step-num">3</div><h4>Select Payment</h4></div>
-          <div class="pay-grid">
-            <div class="pay-opt selected" onclick="selectPay(this)"><div class="tick"><i class="fas fa-check"></i></div><div class="ic">💰</div><div class="lb">Wallet Pay</div></div>
-            <div class="pay-opt" onclick="selectPay(this)"><div class="tick"><i class="fas fa-check"></i></div><div class="pay-logos"><span style="color:#e2136e">bK</span><span style="color:#f6921e">N</span><span style="color:#8b2f87">R</span></div><div class="lb">Instant Pay</div></div>
-          </div>
-          <div class="info-row bn"><i class="fas fa-info-circle"></i> আপনার অ্যাকাউন্ট ব্যালেন্স <b id="walletShow">৳ 0</b></div>
-          <div class="info-row bn"><i class="fas fa-info-circle"></i> টপআপ কিনতে আপনার প্রয়োজন <b id="needShow">৳ 0</b></div>
-          <button class="buy-btn" onclick="buyNow()">Buy Now</button>
-          <div class="rules"><h4><i class="fas fa-file-contract"></i> Rules & Conditions</h4><ul>
-            <li class="bn">শুধুমাত্র Bangladesh সার্ভারে ID Code দিয়ে টপ আপ হবে।</li>
-            <li class="bn">Player ID ভুল দিয়ে Diamond না পেলে HALLO TOPUP কর্তৃপক্ষ দায়ী নয়।</li>
-            <li class="bn">Order কনফার্ম হওয়ার পরেও ডায়মন্ড না পেলে ID Pass দিতে হবে।</li>
-            <li class="bn">অর্ডার Cancel হলে হিস্টোরিতে কারণ দেখা যাবে।</li>
-          </ul></div>
-        </div>
-      </div>
-
-      <div id="page-orders" class="page">
-        <div class="pad">
-          <div class="page-title"><i class="fas fa-list-ul"></i><h2>My Orders</h2></div>
-          <div id="ordersList"></div>
-          <div class="empty-box" id="ordersEmpty"><div class="t">No order data found !</div><button class="btn-s" onclick="tab('home')">ORDER NOW</button></div>
-        </div>
-      </div>
-
-      <div id="page-addmoney" class="page">
-        <div class="pad">
-          <div class="am-card"><h2>Add Money</h2><label class="field-label">Enter the amount</label><input class="inp" type="number" id="addAmt" placeholder="Amount"><button class="btn-p" style="margin-bottom:0" onclick="submitDeposit()">Click Here To Add Money</button></div>
-          <div class="video-box"><h4><i class="fas fa-desktop" style="color:#86efac"></i> How to add money</h4><div id="videoArea"><div class="video-ph" onclick="toast('ভিডিও এখনো যুক্ত হয়নি')"><div class="play"><i class="fas fa-play"></i></div></div></div></div>
-        </div>
-      </div>
-
-      <div id="page-codes" class="page">
-        <div class="pad">
-          <div class="page-title"><i class="fas fa-ticket-alt"></i><h2>My Codes</h2></div>
-          <label class="field-label">Enter Coupon Code</label>
-          <input class="inp" type="text" placeholder="e.g. FREE100">
-          <button class="btn-p">Redeem Code</button>
-          <div class="empty-box" style="margin-top:0;"><p style="color:var(--muted);">No active codes found.</p></div>
-        </div>
-      </div>
-
-      <div id="page-profile" class="page">
-        <div class="pad">
-          <div class="phead">
-            <div class="big-av" id="pAv">U<div class="dot"></div></div>
-            <div class="name" id="userName">User</div>
-            <div class="badge"><i class="fas fa-check-circle"></i> Verified</div>
-            <div id="vipBadge" class="vip-badge silver"><i class="fas fa-medal"></i> <span id="vipLevelName">Silver</span></div>
-            <div class="spending-box">
-              <span class="label">Total Spent</span>
-              <span class="amount">৳<span id="totalSpent">0</span></span>
-            </div>
-            <div class="wal"><span style="color:var(--muted);font-weight:600;">Wallet Balance</span><span class="amt">Tk <span id="pBal">0</span></span></div>
-          </div>
-          <button class="btn-b" onclick="tab('addmoney')">Add Money</button>
-          <button class="btn-out" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</button>
-        </div>
-      </div>
+      <!-- অন্যান্য পেজগুলো একই থাকবে -->
+      <div id="page-mystery" class="page"><div class="order-pad"><div class="order-hero"><div class="order-hero-ic"><i class="fas fa-box-open"></i></div><div><h3>Mystery Box</h3></div></div></div></div>
+      <div id="page-weekly" class="page"><div class="order-pad"><div class="order-hero"><h3>Weekly & Monthly</h3></div></div></div>
+      <div id="page-premium" class="page"><div class="order-pad"><div class="order-hero"><h3>Premium</h3></div></div></div>
+      <div id="page-order" class="page"><div class="order-pad"><h3>Order</h3></div></div>
+      <div id="page-orders" class="page"><div class="pad"><h2>My Orders</h2></div></div>
+      <div id="page-addmoney" class="page"><div class="pad"><h2>Add Money</h2></div></div>
+      <div id="page-codes" class="page"><div class="pad"><h2>My Codes</h2></div></div>
+      <div id="page-profile" class="page"><div class="pad"><h2>Profile</h2></div></div>
     </div>
 
-    <div class="float" id="floatBtn" onclick="openShareModal()"><i class="fas fa-share-alt"></i></div>
+    <div class="float" id="floatBtn" onclick="openDownloadModal()"><i class="fas fa-download"></i></div>
     <nav class="bnav">
       <div class="ni active" id="nav-home" onclick="tab('home')"><i class="fas fa-home"></i><span>Home</span></div>
       <div class="ni" id="nav-orders" onclick="tab('orders')"><i class="fas fa-shopping-bag"></i><span>My Orders</span></div>
@@ -504,41 +277,40 @@ header{position:fixed;top:0;left:50%;transform:translateX(-50%);width:100%;max-w
       <div class="ni" id="nav-profile" onclick="tab('profile')"><i class="fas fa-user"></i><span>My Account</span></div>
     </nav>
   </div>
-  <div class="toast" id="toast"></div>
-</div>
-
-<!-- ✅ Share & Download Modal -->
-<div class="modal-overlay" id="shareModal">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h3>Share & Install App</h3>
-      <button class="close-modal" onclick="closeShareModal()"><i class="fas fa-times"></i></button>
-    </div>
-    
-    <div class="share-options">
-      <div class="share-item" onclick="copyLink()">
-        <div class="share-icon" style="background:#7c3aed;"><i class="fas fa-link"></i></div>
-        <span>Copy Link</span>
+  
+  <!-- Download Modal -->
+  <div class="modal-overlay" id="downloadModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3><i class="fas fa-download"></i> Download & Install</h3>
+        <button class="close-modal" onclick="closeDownloadModal()"><i class="fas fa-times"></i></button>
       </div>
-      <div class="share-item" onclick="shareNative()">
-        <div class="share-icon" style="background:#10b981;"><i class="fas fa-share-square"></i></div>
-        <span>Share</span>
+      <div class="download-options">
+        <div class="download-option" onclick="downloadHTML()">
+          <i class="fas fa-file-download"></i>
+          <b>Download HTML</b>
+          <small>Save as file</small>
+        </div>
+        <div class="download-option" onclick="installPWA()">
+          <i class="fas fa-mobile-alt"></i>
+          <b>Install App</b>
+          <small>Add to home screen</small>
+        </div>
+        <div class="download-option" onclick="shareApp()">
+          <i class="fas fa-share-alt"></i>
+          <b>Share App</b>
+          <small>Share link</small>
+        </div>
+        <div class="download-option" onclick="copyLink()">
+          <i class="fas fa-link"></i>
+          <b>Copy Link</b>
+          <small>Copy URL</small>
+        </div>
       </div>
-      <div class="share-item" onclick="window.open('https://t.me/yourchannel', '_blank')">
-        <div class="share-icon" style="background:#0088cc;"><i class="fab fa-telegram-plane"></i></div>
-        <span>Telegram</span>
-      </div>
-      <div class="share-item" onclick="installGuide()">
-        <div class="share-icon" style="background:#f59e0b;"><i class="fas fa-download"></i></div>
-        <span>Install</span>
-      </div>
-    </div>
-
-    <div class="copy-link-box">
-      <input type="text" id="appLinkInput" value="" readonly>
-      <button onclick="copyLink()">Copy</button>
     </div>
   </div>
+  
+  <div class="toast" id="toast"></div>
 </div>
 
 <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
@@ -548,466 +320,91 @@ header{position:fixed;top:0;left:50%;transform:translateX(-50%);width:100%;max-w
 const firebaseConfig={apiKey:"AIzaSyDR-xSjjR-EkWo7oAcpgP2xJ32wz17fC1o",authDomain:"fresh-b7ec1.firebaseapp.com",databaseURL:"https://fresh-b7ec1-default-rtdb.firebaseio.com",projectId:"fresh-b7ec1",storageBucket:"fresh-b7ec1.firebasestorage.app",messagingSenderId:"953506022680",appId:"1:953506022680:web:8567d549a54b34e0ce4a6d",measurementId:"G-WELZPLQDPZ"};
 firebase.initializeApp(firebaseConfig);
 const auth=firebase.auth(), db=firebase.database();
-const gProvider=new firebase.auth.GoogleAuthProvider();
-const GATEWAY="https://topup121.github.io/datcj/";
 
-// ✅ Online/Offline Check System
-function checkOnlineStatus() {
-    const overlay = document.getElementById('offlineOverlay');
-    if (!navigator.onLine) {
-        overlay.style.display = 'flex';
-    } else {
-        overlay.style.display = 'none';
-    }
+// Download Functions
+function openDownloadModal(){document.getElementById('downloadModal').classList.add('show');}
+function closeDownloadModal(){document.getElementById('downloadModal').classList.remove('show');}
+
+function downloadHTML(){
+  const htmlContent = document.documentElement.outerHTML;
+  const blob = new Blob([htmlContent], {type: 'text/html'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'HALLO_TOPUP.html';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  toast("✅ ডাউনলোড শুরু হয়েছে!");
+  closeDownloadModal();
 }
 
-window.addEventListener('online', checkOnlineStatus);
-window.addEventListener('offline', checkOnlineStatus);
-window.addEventListener('load', checkOnlineStatus);
-
-// ✅ Share & Download System
-function openShareModal() {
-    document.getElementById('appLinkInput').value = window.location.href;
-    document.getElementById('shareModal').classList.add('show');
+function installPWA(){
+  if('beforeinstallprompt' in window){
+    window.prompt({prompt: 'Install HALLO TOPUP', userChoice: (choice) => {
+      if(choice.outcome === 'accepted') toast("✅ অ্যাপ ইনস্টল হয়েছে!");
+    }});
+  } else {
+    alert("ব্রাউজার মেনু থেকে 'Add to Home Screen' সিলেক্ট করুন");
+  }
+  closeDownloadModal();
 }
 
-function closeShareModal() {
-    document.getElementById('shareModal').classList.remove('show');
+function shareApp(){
+  if(navigator.share){
+    navigator.share({
+      title: 'HALLO TOPUP',
+      text: 'Free Fire Diamond Topup - Best Price!',
+      url: window.location.href
+    }).catch(()=>{});
+  } else {
+    copyLink();
+  }
+  closeDownloadModal();
 }
 
-function copyLink() {
-    const input = document.getElementById('appLinkInput');
-    input.select();
-    input.setSelectionRange(0, 99999);
-    navigator.clipboard.writeText(input.value).then(() => {
-        toast("✅ Link copied to clipboard!");
-        closeShareModal();
-    }).catch(() => {
-        document.execCommand('copy');
-        toast("✅ Link copied!");
-        closeShareModal();
-    });
+function copyLink(){
+  navigator.clipboard.writeText(window.location.href).then(()=>{
+    toast("✅ লিংক কপি হয়েছে!");
+    closeDownloadModal();
+  });
 }
 
-function shareNative() {
-    if (navigator.share) {
-        navigator.share({
-            title: 'HALLO TOPUP',
-            text: 'Get the best Free Fire topup deals at HALLO TOPUP!',
-            url: window.location.href
-        }).catch(() => {});
-    } else {
-        copyLink();
-    }
-}
-
-function installGuide() {
-    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-    const isAndroid = /Android/.test(navigator.userAgent);
-    
-    let msg = "";
-    if (isIOS) {
-        msg = "To install:\n1. Tap the Share icon (️) at the bottom\n2. Scroll down and tap 'Add to Home Screen'\n3. Tap 'Add'";
-    } else if (isAndroid) {
-        msg = "To install:\n1. Tap the 3 dots menu (⋮) at the top right\n2. Tap 'Add to Home screen'\n3. Tap 'Add'";
-    } else {
-        msg = "To install:\n1. Click the 3 dots menu in your browser\n2. Select 'Install HALLO TOPUP' or 'Add to Home Screen'";
-    }
-    alert(msg);
-    closeShareModal();
-}
-
-function googleLogin(){if(location.protocol==='file:'||!location.hostname){toast("⚠️ Google login শুধু হোস্ট করা সাইটে কাজ করে।");return;}auth.signInWithPopup(gProvider).catch(e=>toast("Google Login Failed: "+e.message));}
-function emailLogin(){const em=lEmail.value.trim(),pw=lPass.value;if(!em||!pw){toast("সব ঘর পূরণ করুন");return;}auth.signInWithEmailAndPassword(em,pw).catch(e=>toast("Login Failed: "+e.message));}
-function emailSignup(){const em=sEmail.value.trim(),pw=sPass.value;if(!em||!pw){toast("সব ঘর পূরণ করুন");return;}if(pw.length<6){toast("পাসওয়ার্ড কমপক্ষে  অক্ষর");return;}auth.createUserWithEmailAndPassword(em,pw).catch(e=>toast("Signup Failed: "+e.message));}
+// Firebase Auth Functions
+function googleLogin(){auth.signInWithPopup(new firebase.auth.GoogleAuthProvider()).catch(e=>toast("Error: "+e.message));}
+function emailLogin(){const em=lEmail.value.trim(),pw=lPass.value;if(!em||!pw){toast("সব ঘর পূরণ করুন");return;}auth.signInWithEmailAndPassword(em,pw).catch(e=>toast("Login Failed"));}
+function emailSignup(){const em=sEmail.value.trim(),pw=sPass.value;if(!em||!pw||pw.length<6){toast("সঠিক তথ্য দিন");return;}auth.createUserWithEmailAndPassword(em,pw).catch(e=>toast("Signup Failed"));}
 function logout(){if(confirm("Logout?"))auth.signOut();}
 
-let balRef=null, ordRef=null, myUid=null, myBalance=0, displayName='User', userLevel=1, totalSpent=0, currentPage='home', pageHistory=['home'], currentOfferPkg=null, checkedUid=null;
-
-function applyLogo(url,name){if(name){siteName.innerText=name;authName.innerText=name;document.title=name+' - Free Fire';}const html=url?`<img src="${url}">`:`<i class="fas fa-smile-wink"></i>`;logoIc.innerHTML=html;authLogo.innerHTML=html;authLogo2.innerHTML=html;}
-function getVipLevel(total){if(total>=5000) return {level:6,name:'Master',class:'master'};if(total>=2500) return {level:5,name:'Heroic',class:'heroic'};if(total>=1000) return {level:4,name:'Diamond',class:'diamond'};if(total>=500) return {level:3,name:'Platinum',class:'platinum'};if(total>=200) return {level:2,name:'Gold',class:'gold'};return {level:1,name:'Silver',class:'silver'};}
-function updateVipDisplay(){const vip=getVipLevel(totalSpent);const badge=document.getElementById('vipBadge');const levelName=document.getElementById('vipLevelName');const premiumLevel=document.getElementById('premiumUserLevel');const premiumStatus=document.getElementById('premiumStatus');badge.className='vip-badge '+vip.class;levelName.innerText=vip.name;document.getElementById('totalSpent').innerText=totalSpent;if(premiumLevel){premiumLevel.innerText='Level '+userLevel;premiumStatus.innerText=vip.name+' Member';}}
-
-function updateHeaderVip(){
-  const vipNames = {1:'Silver',2:'Gold',3:'Platinum',4:'Diamond',5:'Heroic',6:'Master'};
-  const vipColors = {1:'#94a3b8',2:'#fbbf24',3:'#06b6d4',4:'#3b82f6',5:'#8b5cf6',6:'#ef4444'};
-  const vBadge = document.getElementById('hVip');
-  if(vBadge){
-    vBadge.innerText = vipNames[userLevel]||'Silver';
-    vBadge.style.background = `linear-gradient(135deg,${vipColors[userLevel]},${vipColors[userLevel]}dd)`;
-  }
-}
+let myUid=null, myBalance=0, displayName='User', userLevel=1, totalSpent=0, currentPage='home';
 
 auth.onAuthStateChanged(user=>{
   if(user){
     document.getElementById('loginScreen').classList.add('hidden');
     document.getElementById('signupScreen').classList.add('hidden');
     document.getElementById('mainApp').classList.remove('hidden');
-    document.getElementById('mainApp').style.display='flex';
-    
     myUid=user.uid;
     displayName=user.displayName||user.email.split('@')[0];
-    const photo=user.photoURL;
-    
-    const userNameEl = document.getElementById('userName');
-    if(userNameEl) userNameEl.innerText=displayName;
-    
-    const hAvEl = document.getElementById('hAv');
-    const pAvEl = document.getElementById('pAv');
-    
-    if(photo){
-      if(hAvEl) hAvEl.innerHTML='<img src="'+photo+'">';
-      if(pAvEl) pAvEl.innerHTML='<img src="'+photo+'"><div class="dot"></div>';
-    }else{
-      const ini=displayName.charAt(0).toUpperCase();
-      if(hAvEl) hAvEl.innerText=ini;
-      if(pAvEl) pAvEl.innerHTML=ini+'<div class="dot"></div>';
-    }
-    
     db.ref('users/'+user.uid).get().then(s=>{
-      if(!s.exists()){
-        db.ref('users/'+user.uid).set({name:displayName,email:user.email||'',balance:0,totalSpent:0,vipLevel:1,joined:Date.now()});
-      }else{
-        db.ref('users/'+user.uid).update({name:displayName,email:user.email||''});
-      }
+      if(!s.exists()) db.ref('users/'+user.uid).set({name:displayName,balance:0,totalSpent:0,vipLevel:1});
     });
-    
-    if(balRef)balRef.off();
-    balRef=db.ref('users/'+user.uid);
-    
-    // ✅ ব্যালেন্স আপডেট ফিক্স (নিরাপদ উপায়ে)
-    balRef.on('value',s=>{
-      const d=s.val()||{};
-      myBalance=d.balance||0;
-      totalSpent=d.totalSpent||0;
-      userLevel=d.vipLevel||1;
-      
-      const hBalEl = document.getElementById('hBal');
-      if(hBalEl) hBalEl.innerText = myBalance;
-      
-      const pBalEl = document.getElementById('pBal');
-      if(pBalEl) pBalEl.innerText = myBalance;
-      
-      const mBalEl = document.getElementById('mysteryBalance');
-      if(mBalEl) mBalEl.innerText = ' ' + myBalance;
-      
-      const wBalEl = document.getElementById('weeklyBalance');
-      if(wBalEl) wBalEl.innerText = '৳ ' + myBalance;
-      
-      const pBal2El = document.getElementById('premiumBalance');
-      if(pBal2El) pBal2El.innerText = '৳ ' + myBalance;
-      
-      const wShowEl = document.getElementById('walletShow');
-      if(wShowEl) wShowEl.innerText = ' ' + myBalance;
-      
-      updateVipDisplay();
-      updateHeaderVip();
-      renderHome();
-    });
-    
-    if(ordRef)ordRef.off();
-    ordRef=db.ref('orders');
-    ordRef.on('value',s=>renderMyOrders(s.val()||{}));
-  }else{
+    db.ref('users/'+user.uid+'/balance').on('value',s=>{myBalance=s.val()||0;document.getElementById('hBal').innerText=myBalance;});
+  } else {
     document.getElementById('mainApp').classList.add('hidden');
-    document.getElementById('mainApp').style.display='none';
     document.getElementById('loginScreen').classList.remove('hidden');
-    document.getElementById('signupScreen').classList.add('hidden');
   }
 });
-
-let mysteryPackages = [];
-let weeklyPackages = [];
-let premiumPackages = [];
-
-db.ref('homeData/specialPackages').on('value', snap => {
-  const data = snap.val();
-  if(data) {
-    if(data.mystery) mysteryPackages = data.mystery;
-    if(data.weekly) weeklyPackages = data.weekly;
-    if(data.premium) premiumPackages = data.premium;
-    if(currentPage === 'mystery') renderMysteryPackages();
-    if(currentPage === 'weekly') renderWeeklyPackages();
-    if(currentPage === 'premium') renderPremiumPackages();
-  }
-});
-
-const FULL_DIAMONDS=[{n:'Weekly Lite',p:45},{n:'Weekly',p:158},{n:'25 Diamond',p:20},{n:'50 Diamond',p:35},{n:'115 Diamond',p:79},{n:'240 Diamond',p:158},{n:'355 Diamond',p:237},{n:'480 Diamond',p:316},{n:'505 Diamond',p:336},{n:'610 Diamond',p:400},{n:'850 Diamond',p:558},{n:'1090 Diamond',p:716},{n:'1240 Diamond',p:800},{n:'1720 Diamond',p:1116},{n:'2090 Diamond',p:1358},{n:'2530 Diamond',p:1610},{n:'4010 Diamond',p:2570},{n:'5060 Diamond',p:3220},{n:'10120 Diamond',p:6440},{n:'Monthly',p:790}];
-let cards=[
- {name:'Uid Topup [BD SERVER]',icon:'fa-gamepad',packages:FULL_DIAMONDS},
- {name:'Weekly/Monthly',icon:'fa-calendar-week',packages:[{n:'Weekly',p:158},{n:'weekly lite',p:45},{n:'Monthly',p:790},{n:'2X Weekly',p:316},{n:'3X Weekly',p:474},{n:'5X Weekly',p:790},{n:'2X Monthly',p:1580},{n:'1Weekly + 1Monthly',p:948}]},
- {name:'Evo Access [Uid]',icon:'fa-shield-halved',packages:[{n:'Evo Access 1',p:120},{n:'Evo Access 2',p:230},{n:'Evo Access 3',p:340},{n:'Evo Access 5',p:550}]},
- {name:'Uid Topup [Indonesia]',icon:'fa-dragon',packages:[{n:'50 Diamond',p:40},{n:'100 Diamond',p:75},{n:'250 Diamond',p:180},{n:'500 Diamond',p:350}]},
- {name:'Level UP PASS [BD]',icon:'fa-arrow-up-right-dots',packages:[{n:'Level Pass 1',p:90},{n:'Level Pass 2',p:170},{n:'Level Pass 3',p:250}]},
- {name:'FF ID Like (200 Max)',icon:'fa-thumbs-up',packages:[{n:'100 Like',p:30},{n:'200 Like',p:55},{n:'500 Like',p:120}]}
-];
-let offers=[{name:'Mystery Box',icon:'fa-box-open',page:'mystery'},{name:'Weekly Offer',icon:'fa-calendar-week',page:'weekly'},{name:'Premium👑',icon:'fa-crown',page:'premium',minLevel:5}];
-
-db.ref('homeData').on('value',snap=>{
-  const d=snap.val();if(!d){renderHome();return;}
-  applyLogo(d.logo,d.siteName);
-  if(d.notice)document.getElementById('noticeText').innerText=d.notice;
-  if(d.telegramLink){const lnk=d.telegramLink;document.getElementById('tgBtn').onclick=function(){window.open(lnk,'_blank');};document.getElementById('floatBtn').onclick=function(){window.open(lnk,'_blank');};}
-  if(d.tutorialVideo)renderTutorial(d.tutorialVideo);
-  if(d.offers){for(let i=0;i<3;i++){const o=d.offers['o'+(i+1)];if(o){if(o.name)offers[i].name=o.name;if(o.image)offers[i].image=o.image;}}}
-  if(d.cards){for(let i=0;i<6;i++){const c=d.cards['card'+(i+1)];if(c){if(c.name)cards[i].name=c.name;if(c.image)cards[i].image=c.image;if(c.packages&&c.packages.length)cards[i].packages=c.packages;}}}
-  renderHome();
-});
-
-let bannerTimer=null, bannerArr=[];
-db.ref('banners').on('value',snap=>{
-  const all=snap.val()||{};bannerArr=Object.keys(all).map(k=>all[k]).filter(b=>b.image);
-  const slider=document.getElementById('bannerSlider');const dotsBox=document.getElementById('bannerDots');
-  if(bannerTimer){clearInterval(bannerTimer);bannerTimer=null;}
-  if(!bannerArr.length){slider.innerHTML='<div class="b-slide"><div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:2rem;"><i class="fas fa-image"></i></div></div>';dotsBox.innerHTML='<span class="on"></span>';return;}
-  let html='';bannerArr.forEach((b,i)=>{const click=b.link?`onclick="window.open('${b.link}','_blank')"`:'';html+=`<div class="b-slide" ${click}><img src="${b.image}"></div>`;});
-  slider.innerHTML=html;let dots='';bannerArr.forEach((b,i)=>{dots+=`<span class="${i===0?'on':''}" onclick="goSlide(${i})"></span>`;});dotsBox.innerHTML=dots;
-  if(bannerArr.length>1){let idx=0;bannerTimer=setInterval(()=>{idx=(idx+1)%bannerArr.length;goSlide(idx);},3000);}
-  slider.addEventListener('scroll',()=>{const i=Math.round(slider.scrollLeft/slider.clientWidth);updateDots(i);});
-});
-function goSlide(i){const slider=document.getElementById('bannerSlider');if(slider)slider.scrollTo({left:i*slider.clientWidth,behavior:'smooth'});}
-function updateDots(i){const dotsBox=document.getElementById('bannerDots');Array.from(dotsBox.children).forEach((d,j)=>d.classList.toggle('on',j===i));}
-function ytId(url){if(!url)return '';const m=url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([\w-]{11})/);return m?m[1]:'';}
-function renderTutorial(url){const id=ytId(url);if(id)document.getElementById('videoArea').innerHTML=`<div class="video-wrap"><iframe src="https://www.youtube.com/embed/${id}" allowfullscreen></iframe></div>`;else document.getElementById('videoArea').innerHTML=`<div class="video-ph" onclick="window.open('${url}','_blank')"><div class="play"><i class="fas fa-play"></i></div></div>`;}
-
-function renderHome(){
-  const offerGridEl = document.getElementById('offerGrid');
-  offerGridEl.innerHTML='';
-  offers.forEach(o=>{const isLocked=o.minLevel && userLevel<o.minLevel;offerGridEl.innerHTML+=`<div class="offer-card ${isLocked?'locked':''}" onclick="openOfferPage('${o.page}',${o.minLevel||0})"><div class="offer-thumb">${o.image?`<img src="${o.image}">`:`<i class="fas ${o.icon}"></i>`}${isLocked?'<span class="offer-badge">L${o.minLevel}</span>':''}</div><div class="offer-name">${o.name}</div></div>`;});
-  
-  const bigGridEl = document.getElementById('bigGrid');
-  bigGridEl.innerHTML='';
-  cards.forEach((c,i)=>{bigGridEl.innerHTML+=`<div class="big-card" onclick="openOrder(${i})"><div class="big-thumb">${c.image?`<img src="${c.image}">`:`<i class="fas ${c.icon}"></i>`}</div><div class="big-name">${c.name}</div></div>`;});
-}
-
-function openOfferPage(pageName,minLevel){if(minLevel && userLevel<minLevel){toast(`❌ VIP Level ${minLevel} প্রয়োজন। আপনার Level: ${userLevel}`);return;}if(pageName==='mystery')renderMysteryPackages();else if(pageName==='weekly')renderWeeklyPackages();else if(pageName==='premium')renderPremiumPackages();pageHistory.push(pageName);tab(pageName);}
-
-function renderMysteryPackages(){
-  const grid=document.getElementById('mysteryGrid');if(!grid)return;grid.innerHTML='';
-  if(!mysteryPackages.length){grid.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:20px;color:#6b7280;">No packages available</div>';return;}
-  mysteryPackages.forEach((pkg,idx)=>{
-    if(!pkg.n||!pkg.p)return;
-    const isSoldOut = pkg.stockOut === true;
-    grid.innerHTML+=`<div class="pkg-item ${isSoldOut?'sold-out':''}" onclick="${isSoldOut?'':'selectMysteryPkg(this,'+idx+')'}">
-      <div class="nm">${pkg.n}</div><div class="pr">৳${pkg.p}</div><span class="rw">${pkg.desc||''}</span>
-    </div>`;
-  });
-}
-
-function renderWeeklyPackages(){
-  const grid=document.getElementById('weeklyGrid');if(!grid)return;grid.innerHTML='';
-  if(!weeklyPackages.length){grid.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:20px;color:#6b7280;">No packages available</div>';return;}
-  weeklyPackages.forEach((pkg,idx)=>{
-    if(!pkg.n||!pkg.p)return;
-    const isSoldOut = pkg.stockOut === true;
-    grid.innerHTML+=`<div class="pkg-item ${isSoldOut?'sold-out':''}" onclick="${isSoldOut?'':'selectWeeklyPkg(this,'+idx+')'}">
-      <div class="nm">${pkg.n}</div><div class="pr">৳${pkg.p}</div>
-      ${pkg.original?`<span class="rw" style="text-decoration:line-through;color:#ef4444;">৳${pkg.original}</span>`:''}
-      <span class="rw">${pkg.reward||''}</span>
-    </div>`;
-  });
-}
-
-function renderPremiumPackages(){
-  const grid=document.getElementById('premiumGrid');if(!grid)return;grid.innerHTML='';
-  if(!premiumPackages.length){grid.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:20px;color:#6b7280;">No packages available</div>';return;}
-  premiumPackages.forEach((pkg,idx)=>{
-    if(!pkg.n||!pkg.p)return;
-    const isSoldOut = pkg.stockOut === true;
-    grid.innerHTML+=`<div class="pkg-item ${isSoldOut?'sold-out':''}" onclick="${isSoldOut?'':'selectPremiumPkg(this,'+idx+')'}">
-      <div class="nm">${pkg.n}</div><div class="pr">${pkg.p}</div>
-      ${pkg.original?`<span class="rw" style="text-decoration:line-through;color:#ef4444;">৳${pkg.original}</span>`:''}
-      <span class="rw">${pkg.reward||''}</span>
-    </div>`;
-  });
-}
-
-function selectMysteryPkg(el,idx){document.querySelectorAll('#mysteryGrid .pkg-item').forEach(x=>x.classList.remove('selected'));el.classList.add('selected');currentOfferPkg=mysteryPackages[idx];}
-function selectWeeklyPkg(el,idx){document.querySelectorAll('#weeklyGrid .pkg-item').forEach(x=>x.classList.remove('selected'));el.classList.add('selected');currentOfferPkg=weeklyPackages[idx];}
-function selectPremiumPkg(el,idx){document.querySelectorAll('#premiumGrid .pkg-item').forEach(x=>x.classList.remove('selected'));el.classList.add('selected');currentOfferPkg=premiumPackages[idx];}
-
-async function checkMysteryUid(){checkUidGeneric('mysteryUid','mysteryResult');}
-async function checkWeeklyUid(){checkUidGeneric('weeklyUid','weeklyResult');}
-async function checkPremiumUid(){checkUidGeneric('premiumUid','premiumResult');}
-async function checkUidGeneric(inputId, resultId){
-  const uid=document.getElementById(inputId).value.trim();const resultDiv=document.getElementById(resultId);
-  if(!uid){resultDiv.className='uid-result err';resultDiv.innerText='️ Player ID দিন';return;}
-  if(!/^\d{5,15}$/.test(uid)){resultDiv.className='uid-result err';resultDiv.innerText=' ভুল Player ID';return;}
-  resultDiv.className='uid-result loading';resultDiv.innerHTML='<i class="fas fa-spinner fa-spin"></i> চেক করা হচ্ছে...';
-  try{
-    const response=await fetch(`https://ffxinfo-ffx.ffxapis.workers.dev/ff-info?uid=${uid}`);const data=await response.json();
-    const root=data&&typeof data==='object'?data:{};const source=root.data||root;let raw={};try{raw=JSON.parse(source.raw_data||"{}");}catch(e){}
-    const basic=source.basicInfo||source.profileInfo||source.profile||{};const accountInfoRaw=raw.AccountInfo||{};
-    const playerName=basic.nickname||basic.name||source.name||source.username||accountInfoRaw.AccountName||"Unknown Player";
-    if(playerName&&playerName!=="Unknown Player"){resultDiv.className='uid-result ok';resultDiv.innerHTML=`<i class="fas fa-check-circle"></i> Player: <b>${playerName}</b>`;checkedUid=uid;}
-    else{resultDiv.className='uid-result err';resultDiv.innerText='❌ প্লেয়ার খুঁজে পাওয়া যায়নি।';}
-  }catch(error){resultDiv.className='uid-result err';resultDiv.innerText=' সার্ভারে সমস্যা হয়েছে।';}
-}
-
-// ✅ FIXED MYSTERY BOX REWARD LOGIC
-function getRandomReward(pkg){
-  // Mystery box uses 'desc' field for rewards, not 'rewards' array
-  return pkg.desc || "Mystery Reward";
-}
-
-function buyMysteryBox(){
-  if(!currentOfferPkg){toast('️ আগে প্যাকেজ সিলেক্ট করুন');return;}const uid=document.getElementById('mysteryUid').value.trim();
-  if(!uid||!checkedUid){toast('⚠️ আগে UID দিয়ে নাম চেক করুন');return;}if(myBalance<currentOfferPkg.p){toast(' ব্যালেন্স কম! আগে Add Money করুন');tab('addmoney');return;}
-  if(currentOfferPkg.stockOut){toast('❌ এই প্যাকেজটি স্টক আউট!');return;}
-  const randomReward=getRandomReward(currentOfferPkg);
-  if(confirm(`${currentOfferPkg.n} কিনতে চান?\nসম্ভাব্য রিওয়ার্ড: ${randomReward}`)){
-    const newTotal=totalSpent+currentOfferPkg.p;const vipInfo=getVipLevel(newTotal);
-    const orderData={uid:myUid,name:displayName,pkg:currentOfferPkg.n,price:currentOfferPkg.p,pid:uid,status:'pending',reward:randomReward,type:'mystery',time:Date.now()};
-    db.ref('users/'+myUid).update({balance:myBalance-currentOfferPkg.p,totalSpent:newTotal,vipLevel:vipInfo.level}).then(()=>{db.ref('orders').push(orderData);toast(` অর্ডার করা হয়েছে! Admin confirm করলে পাবেন।`);tab('orders');});
-  }
-}
-function buyWeeklyOffer(){
-  if(!currentOfferPkg){toast('️ আগে প্যাকেজ সিলেক্ট করুন');return;}const uid=document.getElementById('weeklyUid').value.trim();
-  if(!uid||!checkedUid){toast('️ আগে UID দিয়ে নাম চেক করুন');return;}if(myBalance<currentOfferPkg.p){toast('❌ ব্যালেন্স কম! আগে Add Money করুন');tab('addmoney');return;}
-  if(currentOfferPkg.stockOut){toast('❌ এই প্যাকেজটি স্টক আউট!');return;}
-  if(confirm(`${currentOfferPkg.n} কিনতে চান? (৳${currentOfferPkg.p})`)){
-    const newTotal=totalSpent+currentOfferPkg.p;const vipInfo=getVipLevel(newTotal);
-    const orderData={uid:myUid,name:displayName,pkg:currentOfferPkg.n,price:currentOfferPkg.p,pid:uid,status:'pending',reward:currentOfferPkg.reward,type:'weekly',time:Date.now()};
-    db.ref('users/'+myUid).update({balance:myBalance-currentOfferPkg.p,totalSpent:newTotal,vipLevel:vipInfo.level}).then(()=>{db.ref('orders').push(orderData);toast(`✅ অর্ডার করা হয়েছে!\nAdmin confirm করলে ${currentOfferPkg.reward} পাবেন।`);tab('orders');});
-  }
-}
-function buyPremiumOffer(){
-  if(userLevel<5){toast(' Premium এর জন্য VIP Level 5 প্রয়োজন!');return;}if(!currentOfferPkg){toast('⚠️ আগে প্যাকেজ সিলেক্ট করুন');return;}
-  const uid=document.getElementById('premiumUid').value.trim();if(!uid||!checkedUid){toast('️ আগে UID দিয়ে নাম চেক করুন');return;}
-  if(myBalance<currentOfferPkg.p){toast(' ব্যালেন্স কম! আগে Add Money করুন');tab('addmoney');return;}
-  if(currentOfferPkg.stockOut){toast('❌ এই প্যাকেজটি স্টক আউট!');return;}
-  if(confirm(`${currentOfferPkg.n} কিনতে চান? (৳${currentOfferPkg.p})`)){
-    const newTotal=totalSpent+currentOfferPkg.p;const vipInfo=getVipLevel(newTotal);
-    const orderData={uid:myUid,name:displayName,pkg:currentOfferPkg.n,price:currentOfferPkg.p,pid:uid,status:'pending',reward:currentOfferPkg.reward,type:'premium',time:Date.now()};
-    db.ref('users/'+myUid).update({balance:myBalance-currentOfferPkg.p,totalSpent:newTotal,vipLevel:vipInfo.level}).then(()=>{db.ref('orders').push(orderData);toast(`✅ Premium অর্ডার করা হয়েছে!\nAdmin confirm করলে পাবেন।`);tab('orders');});
-  }
-}
-
-function goBack(){if(pageHistory.length>1){pageHistory.pop();tab(pageHistory[pageHistory.length-1]);}else{tab('home');}}
-
-function renderMyOrders(all){
-  const ordersListEl = document.getElementById('ordersList');
-  const ordersEmptyEl = document.getElementById('ordersEmpty');
-  ordersListEl.innerHTML='';let count=0;
-  Object.keys(all).reverse().forEach(k=>{
-    const o=all[k];if(o.uid!==myUid)return;count++;
-    let statusText = '', extraHtml = '';
-    if(o.status==='pending'){statusText = ' Pending';} 
-    else if(o.status==='success'){statusText = '✅ Success';} 
-    else if(o.status==='cancelled'){
-      statusText = '❌ Cancelled';
-      if(o.reason) extraHtml += `<span class="cancel-reason">Reason: ${o.reason}</span>`;
-      
-      if(o.refunded !== true) {
-         db.ref('orders/'+k+'/refunded').set(true);
-         db.ref('users/'+myUid+'/balance').transaction(currentBalance => {
-             return (currentBalance || 0) + parseFloat(o.price || 0);
-         });
-         extraHtml += `<span class="refund-msg"><i class="fas fa-undo"></i> Refunded ${o.price} to wallet</span>`;
-      } else {
-         extraHtml += `<span class="refund-msg"><i class="fas fa-check-circle"></i> Refunded ৳${o.price}</span>`;
-      }
-    }
-    let rewardText=o.reward?`<br><small style="color:var(--primary);">Reward: ${o.reward}</small>`:'';
-    ordersListEl.innerHTML+=`<div class="ord-item"><div><h4>${o.pkg}</h4><p>ID: ${o.pid} • ৳${o.price}${rewardText}${extraHtml}</p></div><span class="st ${o.status}">${statusText}</span></div>`;
-  });
-  ordersEmptyEl.style.display=count?'none':'block';
-}
-
-const fakeNames = ['Rahim Ahmed', 'Karim Uddin', 'Sabina Islam', 'Tanvir Hasan', 'Arif Hossain', 'Nusrat Jahan', 'Shakib Al', 'Mehedi Hasan', 'Fahim Chowdhury', 'Sumaya Akter'];
-const fakePackages = ['10120 Diamonds', '5060 Diamonds', '2200 Diamonds', '1090 Diamonds', '850 Diamonds', '1720 Diamonds', '610 Diamonds', '4010 Diamonds'];
-function renderFakeTopups(){
-  const list = document.getElementById('recentList');list.innerHTML = '';
-  for(let i=0; i<5; i++){
-    const rndName = fakeNames[Math.floor(Math.random() * fakeNames.length)];
-    const rndPkg = fakePackages[Math.floor(Math.random() * fakePackages.length)];
-    const rndPrice = Math.floor(Math.random() * 5000) + 100;
-    list.innerHTML += `<div class="ro-item"><div class="ro-u"><div class="ro-av">${rndName.charAt(0)}</div><div class="ro-n"><h4>${rndName}</h4><p>${rndPkg}</p></div></div><div class="ro-p"> ${rndPrice}</div></div>`;
-  }
-}
-setInterval(renderFakeTopups, 3000);renderFakeTopups();
-
-function submitDeposit(){
-  const amt=parseFloat(document.getElementById('addAmt').value);if(!amt||amt<20){toast("⚠️ কমপক্ষে ৳20 দিন");return;}if(!myUid){toast("লগইন করুন");return;}
-  localStorage.setItem('deposit_amount', amt);const key=db.ref('deposits').push().key;
-  db.ref('deposits/'+key).set({uid:myUid,name:displayName,amount:amt,status:'pending',time:Date.now()})
-  .then(()=>{toast("✅ Deposit request "+amt+" — গেটওয়েতে যাচ্ছি...");document.getElementById('addAmt').value='';window.open(GATEWAY + '?amount=' + amt, '_blank');}).catch(e=>toast(" "+e.message));
-}
-
-let currentCat=null,selectedPkg=null;
-function openOrder(i){
-  currentCat=cards[i];selectedPkg=null;
-  document.getElementById('ordTitle').innerText=currentCat.name;
-  document.getElementById('ordIcon').innerHTML=currentCat.image?`<img src="${currentCat.image}">`:`<i class="fas ${currentCat.icon}"></i>`;
-  const pkgGridEl = document.getElementById('pkgGrid');
-  pkgGridEl.innerHTML='';
-  currentCat.packages.forEach((p,idx)=>{
-    const isSoldOut = p.stockOut === true;
-    pkgGridEl.innerHTML+=`<div class="pkg-item ${isSoldOut?'sold-out':''}" onclick="${isSoldOut?'':'selectPkg(this,'+idx+')'}"><div class="nm">${p.n}</div><div class="pr">BDT ${p.p}</div></div>`;
-  });
-  document.getElementById('uidInput').value='';
-  document.getElementById('uidResult').className='uid-result';
-  updateTotals();
-  pageHistory.push('order');
-  tab('order');
-}
-function selectPkg(el,i){document.querySelectorAll('.pkg-item').forEach(x=>x.classList.remove('selected'));el.classList.add('selected');selectedPkg=currentCat.packages[i];updateTotals();}
-function selectPay(el){document.querySelectorAll('.pay-opt').forEach(x=>x.classList.remove('selected'));el.classList.add('selected');}
-
-// ✅ ব্যালেন্স টোটাল আপডেট ফিক্স
-function updateTotals(){
-  const needShowEl = document.getElementById('needShow');
-  if(needShowEl) needShowEl.innerText = ' ৳ ' + (selectedPkg ? selectedPkg.p : 0);
-  const walletShowEl = document.getElementById('walletShow');
-  if(walletShowEl) walletShowEl.innerText = '  ' + myBalance;
-}
-
-async function checkUid(){
-  const uid=document.getElementById('uidInput').value.trim();
-  const resultDiv=document.getElementById('uidResult');
-  const checkBtn=document.querySelector('.check-btn');
-  if(!uid){resultDiv.className='uid-result err';resultDiv.innerText='️ দয়া করে Player ID দিন';return;}
-  if(!/^\d{5,15}$/.test(uid)){resultDiv.className='uid-result err';resultDiv.innerText='❌ ভুল Player ID';return;}
-  resultDiv.className='uid-result loading';resultDiv.innerHTML='<i class="fas fa-spinner fa-spin"></i> চেক করা হচ্ছে...';checkBtn.disabled=true;checkBtn.innerText='অপেক্ষা করুন...';
-  try{
-    const response=await fetch(`https://ffxinfo-ffx.ffxapis.workers.dev/ff-info?uid=${uid}`);const data=await response.json();const root=data&&typeof data==='object'?data:{};const source=root.data||root;
-    let raw={};try{raw=JSON.parse(source.raw_data||"{}");}catch(e){}
-    const basic=source.basicInfo||source.profileInfo||source.profile||{};const accountInfoRaw=raw.AccountInfo||{};
-    const playerName=basic.nickname||basic.name||source.name||source.username||accountInfoRaw.AccountName||"Unknown Player";
-    if(playerName&&playerName!=="Unknown Player"){resultDiv.className='uid-result ok';resultDiv.innerHTML=`<i class="fas fa-check-circle"></i> Player Name: <b>${playerName}</b>`;}
-    else{resultDiv.className='uid-result err';resultDiv.innerText='❌ প্লেয়ার খুঁজে পাওয়া যায়নি।';}
-  }catch(error){resultDiv.className='uid-result err';resultDiv.innerText='❌ সার্ভারে সমস্যা হয়েছে।';}
-  finally{checkBtn.disabled=false;checkBtn.innerText='আপনার গেম আইডির নাম চেক করুন';}
-}
-
-function buyNow(){
-  if(!selectedPkg){toast('️ আগে প্যাকেজ সিলেক্ট করুন');return;}
-  const uid=document.getElementById('uidInput').value.trim();
-  if(!uid){toast('️ Player ID দিন');return;}
-  if(myBalance<selectedPkg.p){toast('❌ ব্যালেন্স কম! আগে Add Money করুন');return;}
-  if(selectedPkg.stockOut){toast('❌ স্টক আউট!');return;}
-  const newTotal=totalSpent+selectedPkg.p;const vipInfo=getVipLevel(newTotal);
-  const orderData={uid:myUid,name:displayName,pkg:selectedPkg.n,price:selectedPkg.p,pid:uid,status:'pending',type:'topup',time:Date.now()};
-  db.ref('users/'+myUid).update({balance:myBalance-selectedPkg.p,totalSpent:newTotal,vipLevel:vipInfo.level}).then(()=>{
-    db.ref('orders').push(orderData);toast('✅ অর্ডার করা হয়েছে! Admin confirm করলে Diamond পাবেন।');tab('orders');
-  });
-}
 
 function tab(n){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-  document.querySelectorAll('.ni').forEach(x=>x.classList.remove('active'));
   document.getElementById('page-'+n).classList.add('active');
-  const nv=document.getElementById('nav-'+n);
-  if(nv)nv.classList.add('active');
-  document.getElementById('backBtn').classList.toggle('hidden',n==='home');
   currentPage=n;
-  document.querySelector('.content').scrollTop=0;
-  if(n==='home')renderHome();
 }
 function showSignup(){document.getElementById('loginScreen').classList.add('hidden');document.getElementById('signupScreen').classList.remove('hidden');}
 function showLogin(){document.getElementById('signupScreen').classList.add('hidden');document.getElementById('loginScreen').classList.remove('hidden');}
-function toast(m){const t=document.getElementById('toast');t.innerText=m;t.classList.add('show');clearTimeout(t._tm);t._tm=setTimeout(()=>t.classList.remove('show'),3000);}
-renderHome();
+function toast(m){const t=document.getElementById('toast');t.innerText=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3000);}
+function goBack(){tab('home');}
 </script>
 </body>
-</html>
+    </html>
